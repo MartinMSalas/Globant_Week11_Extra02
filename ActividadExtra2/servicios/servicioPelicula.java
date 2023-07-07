@@ -21,19 +21,20 @@ public class servicioPelicula {
 
     public void cargar() {
         System.out.println("Ingrese el titulo de la pelicula ");
-        String titulo = leer.nextLine();
+        String titulo = leer.next();
         System.out.println("Ingrese la duracion de la peli");
         int duracion = leer.nextInt();
         System.out.println("Ingrese el genero de la peli");
         String genero = leer.next();
         System.out.println("Ingrese el año de creacion ");
         int anio = leer.nextInt();
-        Pelicula peli = new Pelicula(titulo, duracion, genero, anio);
+
         int n = pelis.length;
         Pelicula[] auxiliar = new Pelicula[n+1];
         for (int i = 0; i < n; i++) {
             auxiliar[i]= pelis[i];
         }
+        Pelicula peli = new Pelicula(titulo, duracion, genero, anio);
         auxiliar[n]= peli;
         pelis = auxiliar;
 
@@ -62,6 +63,7 @@ public class servicioPelicula {
             if (peli.getTitulo().equals(titulo)) {
                 System.out.println("Se encontro la pelicula");
                 System.out.println(peli);
+                break;
             }
         }
     }

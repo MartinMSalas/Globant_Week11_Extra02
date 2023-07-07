@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class NewMain {
 
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
         int eleccion;
         servicioPelicula sp = new servicioPelicula();
         ServicioAlquiler sa = new ServicioAlquiler();
@@ -35,7 +35,7 @@ public class NewMain {
                 sa.cargarAlquileres(sp.getPelis()[0],10 );
                 break;
             case 4:
-                sp.listar();
+                sa.listar();
                 break;
             case 5:
                 sp.buscarTitulo();

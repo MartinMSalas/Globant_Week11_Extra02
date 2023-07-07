@@ -5,9 +5,12 @@
  */
 package ActividadExtra2.entidades;
 
+
+
 import java.time.LocalDate;
 public class Alquiler {
-    private Pelicula alquilada;
+
+        private Pelicula alquilada;
     private LocalDate inicioAlquiler;
     private LocalDate finAlquiler;
     private double precio;

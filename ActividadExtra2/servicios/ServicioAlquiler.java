@@ -24,13 +24,14 @@ public class ServicioAlquiler {
 
     public void cargarAlquileres(Pelicula peli, double precio) {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
-
         System.out.println("Ingrese La fecha de inicio del Alquiler");
+        // "2020-10-15"
         String fechaInicio = leer.next();
         LocalDate inicioAlquiler =  LocalDate.parse(fechaInicio);
         System.out.println("Ingrese La fecha de fin del Alquiler");
         String fechaFinAlquiler = leer.next();
         LocalDate finAlquiler = LocalDate.parse(fechaFinAlquiler);
+
         Alquiler alqui = new Alquiler(peli,  inicioAlquiler,  finAlquiler,  precio);
         int n = alquileres.length;
         Alquiler[] auxiliar = new Alquiler[n + 1];
@@ -59,6 +60,7 @@ public class ServicioAlquiler {
             if (alqui.getInicioAlquiler().equals(inicioAlquiler) || alqui.getFinAlquiler().equals(finAlquiler)) {
                 System.out.println("El alquiler que busca fue encontrado: ");
                 System.out.println(alqui);
+                break;
             }
         }
     }

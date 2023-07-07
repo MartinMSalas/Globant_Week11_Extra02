@@ -27,7 +27,7 @@ public class Pelicula {
         this.duracion = duracion;
 
         this.genero = genero;
-        
+
         this.anio = anio;
     }
     
