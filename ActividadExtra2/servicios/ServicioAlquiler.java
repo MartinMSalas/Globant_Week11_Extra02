@@ -60,6 +60,7 @@ public class ServicioAlquiler {
             if (alqui.getInicioAlquiler().equals(inicioAlquiler) || alqui.getFinAlquiler().equals(finAlquiler)) {
                 System.out.println("El alquiler que busca fue encontrado: ");
                 System.out.println(alqui);
+                
                 break;
             }
         }
