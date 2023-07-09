@@ -60,7 +60,7 @@ public class ServicioAlquiler {
             if (alqui.getInicioAlquiler().equals(inicioAlquiler) || alqui.getFinAlquiler().equals(finAlquiler)) {
                 System.out.println("El alquiler que busca fue encontrado: ");
                 System.out.println(alqui);
-                
+
                 break;
             }
         }
@@ -68,6 +68,7 @@ public class ServicioAlquiler {
 
 
     public void calcularIngresoTotal() {
+        // El ingreso tiene q ser el precio pactado por la cantidad de dias q se alquilo, y un plus del 10% por cada dia de retraso
         double total = 0;
         for (Alquiler alqui : alquileres) {
             total += alqui.getPrecio();
